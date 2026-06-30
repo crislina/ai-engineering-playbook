@@ -4,7 +4,9 @@
 
 This document defines how AI assistants should discover and load engineering knowledge from this repository.
 
-The goal is to maximize relevant context while minimizing unnecessary token usage.
+The goal is to load the necessary information with the fewest useful tokens.
+
+Minimize knowledge duplication. Maximize knowledge density.
 
 Do not load the entire knowledge base. Load only the documents required to complete the current task.
 
@@ -33,6 +35,8 @@ Start with the minimum required knowledge.
 Load additional documents only when new questions arise.
 
 Avoid loading documents "just in case."
+
+If two documents cover the same idea, prefer the more specific, higher-signal document.
 
 ---
 
@@ -314,12 +318,14 @@ Prefer:
 * focused documents
 * reusable engineering concepts
 * concise guidance
+* dense guidance that avoids repeating the same rule in multiple places
 
 Avoid:
 
 * large reference manuals
 * duplicated knowledge
 * unrelated documentation
+* loading broad overview files when a focused concept file is enough
 
 High signal. Low token cost.
 
@@ -332,3 +338,5 @@ The objective is not to read more.
 The objective is to load the right knowledge at the right time.
 
 Effective context selection is more valuable than a large context window.
+
+Necessary information matters more than available information.
