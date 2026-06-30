@@ -15,39 +15,69 @@ Do not load a file for familiar baseline practice, broad background, or possible
 ## Routes
 
 ```text
+End-to-end feature
+  -> global/workflow.md
+  -> Changes module or dependency boundaries?
+       -> architecture/boundaries.md
+  -> Has HTTP behavior?
+       -> backend/api/api-routing.md
+  -> Coordinates business workflow or transactions?
+       -> backend/persistence/service-layer.md
+  -> Reads or writes stored data?
+       -> backend/persistence/repository.md
+  -> Changes stored shape?
+       -> database/schema.md
+       -> Schema migration? -> database/migrations.md
+  -> Has user-facing UI?
+       -> Follow the Frontend route
+  -> Needs runtime diagnostics?
+       -> platform/observability.md
+  -> Stop
+
 REST API
   -> backend/api/api-routing.md
-  -> Has request/response contracts? -> dto.md
-  -> Has boundary input?             -> validation.md
-  -> Needs custom failures?          -> errors.md
-  -> Identifies actors?              -> authentication.md
-  -> Restricts actions/data?         -> authorization.md
-  -> Returns collections?            -> pagination.md
-  -> Changes a public contract?       -> versioning.md
+  -> Has request/response contracts? -> backend/api/dto.md
+  -> Has boundary input?             -> backend/api/validation.md
+  -> Needs custom failures?          -> backend/api/errors.md
+  -> Identifies actors?              -> backend/api/authentication.md
+  -> Restricts actions/data?         -> backend/api/authorization.md
+  -> Returns collections?            -> backend/api/pagination.md
+  -> Changes a public contract?       -> backend/api/versioning.md
   -> Needs Java/Spring detail?        -> backend/java/spring.md
   -> Stop
 
 Persistence
   -> backend/persistence/repository.md
-  -> Orchestrates a use case/transaction? -> service-layer.md
+  -> Orchestrates a use case/transaction? -> backend/persistence/service-layer.md
   -> Java ORM behavior?                   -> backend/java/persistence.md
-  -> Schema/query concern?                -> relevant database file
+  -> Changes stored shape?                -> database/schema.md
+  -> Schema migration?                    -> database/migrations.md
+  -> Query performance?                   -> database/indexes.md
+  -> PostgreSQL behavior?                 -> database/postgres.md
   -> Stop
 
 Frontend
-  -> relevant frontend concept file
+  -> Component behavior?      -> frontend/components.md
+  -> State ownership?         -> frontend/state.md
+  -> Navigation or URL state? -> frontend/routing.md
+  -> Interactive UI?          -> frontend/accessibility.md
+  -> Multiple viewports?      -> frontend/responsive.md
   -> React-specific behavior? -> frontend/react.md
   -> Stop
 
 Database
   -> database/schema.md
-  -> Schema change?       -> migrations.md
-  -> Query performance?   -> indexes.md
-  -> PostgreSQL behavior? -> postgres.md
+  -> Schema change?       -> database/migrations.md
+  -> Query performance?   -> database/indexes.md
+  -> PostgreSQL behavior? -> database/postgres.md
   -> Stop
 
 Delivery or operations
-  -> relevant platform file only
+  -> CI, release, or deployment? -> platform/delivery.md
+  -> Runtime diagnostics?        -> platform/observability.md
+  -> Container image?            -> platform/containers.md
+  -> Kubernetes behavior?        -> platform/orchestration.md
+  -> Terraform infrastructure?   -> platform/iac.md
   -> Stop
 
 Code review
