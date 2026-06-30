@@ -1,10 +1,10 @@
 # AI Index
 
-This repository is a reusable AI engineering playbook. Before making changes, AI assistants should read the relevant files below and follow the rule priority at the end of this document.
+This repository is a reusable AI engineering playbook. Before making changes, AI assistants should start with [Context Routing](context-routing.md), then read only the relevant files below.
 
 ## Global
 
-Read these first for every task:
+Use these for general engineering guidance. Load only the files relevant to the current task:
 
 - [AI Collaboration](global/ai-collaboration.md)
 - [Workflow](global/workflow.md)
@@ -97,9 +97,9 @@ Use these for platform, delivery, and operational work:
 
 ## Rule Priority
 
-1. Read global guidance before planning.
+1. Start with Context Routing before loading task-specific guidance.
 2. Read shared concept files before technology-specific files.
-3. Read only the technology-specific files relevant to the task.
+3. Read only the global, shared, and technology-specific files relevant to the task.
 4. Keep project-specific facts, roadmap, domain rules, and private decisions outside this repository.
-5. Follow AI Collaboration and Workflow rules first.
-6. If conflicts exist, apply this priority: AI Collaboration > Workflow > Architecture Principles > technology-specific guidance > checklist guidance.
+5. Follow AI Collaboration and Workflow rules when they are relevant to the task.
+6. If conflicts exist, apply this priority: Context Routing > AI Collaboration > Workflow > Architecture Principles > technology-specific guidance > checklist guidance.

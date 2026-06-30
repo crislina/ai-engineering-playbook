@@ -118,6 +118,7 @@ Keeping these separated allows projects to combine only the knowledge they need.
 ai-engineering-playbook/
 
 CLAUDE.md
+context-routing.md
 readme.md
 
 global/
