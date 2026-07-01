@@ -4,7 +4,7 @@ context_loading_mode: lazy
 
 project:
   name: change-guard
-  stack:
+  stacks:
     - java-spring
     - react-vite
 

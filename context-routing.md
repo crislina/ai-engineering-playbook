@@ -1,6 +1,13 @@
 
 # Loading Strategy
 
+## Input configuration
+Always read CLAUDE.md first
+
+CLAUDE.md defines the following fields:
+ - context.loading_mode: lazy | eager
+ - project.stacks: list of technologies to used in the project
+
 ## Lazy Mode
 
 Always load:
