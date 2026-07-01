@@ -1,3 +1,11 @@
 # Claude Entry Point
 
-Load [`context-routing.md`](context-routing.md), then follow its lazy-loading rules.
+context_loading_mode: lazy
+
+project:
+  name: change-guard
+  stack:
+    - java-spring
+    - react-vite
+
+Load [`context-routing.md`](context-routing.md)

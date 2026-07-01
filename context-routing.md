@@ -1,14 +1,41 @@
-# Context Routing
 
-Load the fewest rules that can change the result. Do not preload the repository.
+# Loading Strategy
+
+## Lazy Mode
+
+Always load:
+
+- Global Guardrails
+- Project Guardrails
+- Project Overview
+
+Load all other context only when required by task routing.
+
+---
+
+## Eager Mode
+
+Always load:
+
+- Global Guardrails
+- Project Guardrails
+- Project Overview
+- Global Development
+- Matching Stack Context
+
+Load additional project context according to task routing.
+
 
 ## Routing Protocol
 
-1. Classify the task and technologies from the request and repository.
-2. Load one primary concept file from the routes below.
-3. At each decision gate, load a dependency only when the task needs it.
-4. Load technology guidance only for implementation details not already settled.
-5. Stop when loaded knowledge is sufficient.
+1. Read `CLAUDE.md`.
+2. Identify `context.loading_mode`.
+3. Identify `project.stacks`.
+4. Load baseline context based on loading mode.
+5. Identify the task type.
+6. Load task-specific context according to the routing table.
+7. Load only stack context that matches `project.stacks`.
+8. Do not load unrelated stack context.
 
 Do not load a file for familiar baseline practice, broad background, or possible future work. Prefer the most specific file when rules overlap.
 
